@@ -3,6 +3,13 @@
 *.log
 *.pyc
 *.swp
+.README.md
+.pubspec.yaml
+.analysis_options.yaml
+.dart_tool
+.idea
+.gitignore
+.metadata
 .DS_Store
 .atom/
 .buildlog/
