@@ -5,7 +5,6 @@ import 'package:beginner_stage/weatherApp/model/widget.dart';
 class WeatherApp extends StatefulWidget {
   WeatherAppState createState() => WeatherAppState();
 }
-
 class WeatherAppState extends State<WeatherApp> {
   late Future<post> data;
   dynamic city = "lagos";
@@ -14,13 +13,14 @@ class WeatherAppState extends State<WeatherApp> {
   void initState() {
     super.initState();
     data = new Network().getData(city);
-    data.then((value) => print(value.city!.country));
+    //data.then((value) => print(value.city!.country));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.pink.shade300,
         title: Text("FORECAST"),
         centerTitle: true,
       ),

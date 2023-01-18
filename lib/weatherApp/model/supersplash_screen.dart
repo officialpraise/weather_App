@@ -14,7 +14,7 @@ class SplashsuperScreen extends StatelessWidget {
       animationDuration: Duration(seconds: 5),
       splashTransition: SplashTransition.fadeTransition,
       splashIconSize: MediaQuery.of(context).size.height,
-      backgroundColor:Colors.blue,
+      backgroundColor:Colors.pink,
       pageTransitionType:PageTransitionType.rightToLeft,
     );
   }
