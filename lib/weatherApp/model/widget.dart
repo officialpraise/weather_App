@@ -5,6 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 Widget Two(AsyncSnapshot snapshot) {
   var Postlist = snapshot.data?.list;
+  double temp=double.parse(snapshot.data?.list?[0].temp!.day!.toStringAsFixed(0));
   return Column(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
@@ -18,7 +19,7 @@ Widget Two(AsyncSnapshot snapshot) {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "${Postlist?[0].temp!.day!.toStringAsFixed(0)}°F",
+            "${((temp-32)*5/9).toStringAsFixed(0).toString()}°",
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
           Text(
@@ -197,7 +198,7 @@ Widget BottomView(AsyncSnapshot snapshot) {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Text(
-                                  "${weatherList[index].temp!.min!.toStringAsFixed(0)}°F"),
+                                  "${((weatherList[index].temp!.min!-32)*5/9).toStringAsFixed(0).toString()}°"),
                               Icon(
                                 Icons.arrow_circle_down_outlined,
                                 size: 20,
@@ -209,7 +210,7 @@ Widget BottomView(AsyncSnapshot snapshot) {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Text(
-                                  "${weatherList[index].temp!.max!.toStringAsFixed(0)}°F"),
+                                  "${((weatherList[index].temp!.max!-32)*5/9).toStringAsFixed(0).toString()}°"),
                               Icon(
                                 Icons.arrow_circle_up_outlined,
                                 size: 20,
