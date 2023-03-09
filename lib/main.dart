@@ -1,23 +1,20 @@
-import 'package:beginner_stage/ui/flutter_widget_practice/topflutter_widget.dart';
-import 'package:beginner_stage/weatherApp/model/Splash%20screen.dart';
 import 'package:beginner_stage/weatherApp/model/home.dart';
-import 'package:beginner_stage/weatherApp/model/supersplash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
-//for the other project
-//import 'ui/home.dart';
+
 
 void main() {
+ WidgetsBinding widget= WidgetsFlutterBinding.ensureInitialized();
+ FlutterNativeSplash.preserve(widgetsBinding: widget);
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
   runApp(MaterialApp(
-    home:
-//    Practice(),
-    SplashsuperScreen (),
-   //WeatherApp(),
-    //SplashScreen(),
-    //QuizApp(),
-    //MovieApp(),
-    //Home(),
+    home:WeatherApp(),
     debugShowCheckedModeBanner: false,
-
   ));
+  FlutterNativeSplash.remove();
 }

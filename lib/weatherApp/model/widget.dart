@@ -3,7 +3,7 @@ import 'package:beginner_stage/weatherApp/model/util.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-Widget Two(AsyncSnapshot<post> snapshot) {
+Widget Two(AsyncSnapshot snapshot) {
   var Postlist = snapshot.data?.list;
   return Column(
     mainAxisAlignment: MainAxisAlignment.center,
@@ -93,7 +93,7 @@ Widget Two(AsyncSnapshot<post> snapshot) {
 }
 
 //WeatherIcon code
-Iconic(AsyncSnapshot<post> snapshot) {
+Iconic(AsyncSnapshot snapshot) {
   String weatherIcon = "snapshot.data?.list![0].weather![0].main";
   switch (weatherIcon) {
     case "Rain":
@@ -151,7 +151,7 @@ TextStyle Design() {
 }
 
 //code for the buttom widget scroll list
-Widget BottomView(AsyncSnapshot<post> snapshot) {
+Widget BottomView(AsyncSnapshot snapshot) {
   var weatherList = snapshot.data!.list;
 
   return Container(

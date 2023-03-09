@@ -42,10 +42,20 @@ dependencies:
   lottie: ^2.2.0
   intl: ^0.18.0
   font_awesome_flutter: ^10.3.0
+  flutter_native_splash: ^2.2.19
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+flutter_native_splash:
+  color: ff5ccd
+  android: true
+  ios: true
+  web: true
+  fullscreen: false
+  android_gravity: center
+  ios_content_mode: center
+  image: image/icon.png
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

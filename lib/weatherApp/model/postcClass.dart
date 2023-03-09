@@ -255,14 +255,13 @@ class Weather {
   }
 }
 class Network{
-  Future <post> getData(String City) async{
+  Future getData(String City) async{
     final String url="https://api.openweathermap.org/data/2.5/forecast/daily?q="+City+"&appid="+Util.AppId+"";
     Response response=await get(Uri.parse(url));
     if(response.statusCode==200){
-      print(response.body);
       return post.fromJson(jsonDecode(response.body));
     }else{
-      throw Exception(response.statusCode);
+      throw Exception();
     }
   }
 }
